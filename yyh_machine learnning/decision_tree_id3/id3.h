@@ -26,7 +26,7 @@ public:
   //加载数据
   bool LoadData(const std::string& file_name);
   //创建决策树
-  Node* CreativeTree();
+  bool CreativeTree();
   //结果预测
   std::string Predict(const std::vector<std::string>& item);
   //打印树

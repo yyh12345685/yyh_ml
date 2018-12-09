@@ -10,7 +10,7 @@ int main() {
     return -1;
   }
 
-  if (nullptr == id3.CreativeTree()){
+  if (!id3.CreativeTree()){
     std::cout << "CreativeTree failed." << std::endl;
     return -2;
   }

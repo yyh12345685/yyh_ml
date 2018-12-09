@@ -41,9 +41,9 @@ namespace id3 {
     return true;
   }
   //创建决策树
-  Node* DecisionTreeID3::CreativeTree() {
+  bool DecisionTreeID3::CreativeTree() {
     if (attributes_.empty() || data_.empty()) {
-      return nullptr;
+      return false;
     }
     //check label
     std::vector<std::vector<std::string> >::iterator it = data_.begin();
@@ -57,7 +57,8 @@ namespace id3 {
       }
     } 
     root_ = new Node;
-    return CreativeTreeInner(root_,data_,attributes_);
+    CreativeTreeInner(root_,data_,attributes_);
+    return true;
   }
 
   Node* DecisionTreeID3::CreativeTreeInner(Node* node,
