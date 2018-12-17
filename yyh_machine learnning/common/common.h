@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include <sstream>
+#include <iomanip>
 
 #pragma warning(disable:4244 4081);
 
@@ -27,7 +29,6 @@ inline std::string exchange(std::string& src)
 {
 	return src;
 }
-
 
 template<typename T>
 void Split(std::vector<T>& ret, const std::string &str, char delim, bool ignoreEmpty = true)
@@ -62,9 +63,20 @@ void Split(std::vector<T>& ret, const std::string &str, char delim, bool ignoreE
 	}
 }
 
+template<typename T>
+T GetReservedDecimalNums(T number, int after_point_nums) {
+  //return ((int)(number*pow(10, after_point_nums) + 0.5)) / (pow(10, after_point_nums)*1.0);
+  std::stringstream ss;
+  ss << std::fixed << std::setprecision(after_point_nums) << number;
+  ss >> number;
+  return number;
+}
+
 template __declspec(dllexport) void Split(
   std::vector<std::string>& ret, const std::string &str, char delim, bool ignoreEmpty);
 template __declspec(dllexport) void Split(
   std::vector<int>& ret, const std::string &str, char delim, bool ignoreEmpty);
 
+template __declspec(dllexport) float GetReservedDecimalNums(float number, int after_point_nums);
+template __declspec(dllexport) double GetReservedDecimalNums(double number, int after_point_nums);
 }
