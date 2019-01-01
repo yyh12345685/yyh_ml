@@ -4,6 +4,8 @@
 
 #define MAX_WEAK_CLASSIFIERS 30 //最大弱分类器的个数
 
+namespace ada_boost{
+
 //弱分类器
 struct WeakClassifier
 {
@@ -39,3 +41,5 @@ private:
   //弱分类器，最后一列为弱分类器权重
   std::vector<WeakClassifier> weak_classifier_;
 };
+
+}

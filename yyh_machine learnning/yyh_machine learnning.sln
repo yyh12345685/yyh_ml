@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "common\common.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ada_boost", "ada_boost\ada_boost.vcxproj", "{78DA0868-BAF9-4090-BD27-F1E4567EB5B4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kmeans", "kmeans\kmeans.vcxproj", "{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{78DA0868-BAF9-4090-BD27-F1E4567EB5B4}.Release|x64.Build.0 = Release|x64
 		{78DA0868-BAF9-4090-BD27-F1E4567EB5B4}.Release|x86.ActiveCfg = Release|Win32
 		{78DA0868-BAF9-4090-BD27-F1E4567EB5B4}.Release|x86.Build.0 = Release|Win32
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Debug|x64.ActiveCfg = Debug|x64
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Debug|x64.Build.0 = Debug|x64
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Debug|x86.ActiveCfg = Debug|Win32
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Debug|x86.Build.0 = Debug|Win32
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Release|x64.ActiveCfg = Release|x64
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Release|x64.Build.0 = Release|x64
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Release|x86.ActiveCfg = Release|Win32
+		{0F65F93E-CC3F-4CEC-A94A-F4613FF8797D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

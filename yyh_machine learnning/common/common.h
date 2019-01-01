@@ -10,29 +10,27 @@
 namespace common{
 
 template<typename T>
-T exchange(std::string& src)
-{
+T exchange(std::string& src){
 	return atoll(src.c_str());
 }
+
 template<>
-inline double exchange(std::string& src)
-{
+inline double exchange(std::string& src){
 	return atof(src.c_str());
 }
+
 template<>
-inline float exchange(std::string& src)
-{
+inline float exchange(std::string& src){
 	return float(atof(src.c_str()));
 }
+
 template<>
-inline std::string exchange(std::string& src)
-{
+inline std::string exchange(std::string& src){
 	return src;
 }
 
 template<typename T>
-void Split(std::vector<T>& ret, const std::string &str, char delim, bool ignoreEmpty = true)
-{
+void Split(std::vector<T>& ret, const std::string &str, char delim, bool ignoreEmpty = true){
 	if (str.empty()) {
 		return;
 	}
@@ -41,8 +39,7 @@ void Split(std::vector<T>& ret, const std::string &str, char delim, bool ignoreE
 	size_t n = str.size();
 	size_t s = 0;
 
-	while (s <= n)
-	{
+	while (s <= n){
 		size_t i = str.find_first_of(delim, s);
 		size_t len = 0;
 		//T tmp;

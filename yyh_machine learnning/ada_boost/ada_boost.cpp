@@ -3,6 +3,8 @@
 #include "ada_boost.h"
 #include "common.h"
 
+namespace ada_boost {
+
 bool AdaBoost::Train(
   const std::vector<std::vector<float>>& train_data,int row_size,int column_size){
   if (!CheckData(train_data,row_size,column_size)){
@@ -176,4 +178,6 @@ bool AdaBoost::Classify(
   for (int idx = 0; idx < result_float.size(); idx++)
     result[idx] = Sign(result_float[idx]);
   return true;
+}
+
 }

@@ -30,7 +30,7 @@ int main(){
   test_data.push_back(test_row);
   test_data.push_back(test_row1);
 
-  AdaBoost ada_boost;
+  ada_boost::AdaBoost ada_boost;
   ada_boost.Train(train_data, train_data.size(), train_data[0].size());
 
   std::vector<int>result;
