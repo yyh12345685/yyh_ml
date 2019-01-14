@@ -48,7 +48,6 @@ namespace kmeans{
   void Kmeans<T>::InitNodeTypeInfo(){
     NodeTypeInfo tmp(-1,-1.0);
     data_type_info_.resize(row_len_, tmp);
-    //memset(&(data_type_info_[0]), '\0', sizeof(T)*row_len_);
   }
 
   template<typename T>

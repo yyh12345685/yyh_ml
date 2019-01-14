@@ -17,7 +17,6 @@ bool AdaBoost::Train(
   }
 
   std::vector<float> weak_classifier_add(row_size);  //所有弱分类器的预测加权结果
-  memset(&weak_classifier_add[0], '\0', sizeof(float)*row_size);
 
   for (int idx = 0; idx < MAX_WEAK_CLASSIFIERS;idx++) {
     WeakClassifier weak_classifier;
@@ -167,15 +166,14 @@ bool AdaBoost::Classify(
   }
   std::vector<float>result_float;
   result_float.resize(test_data.size());
-  memset(&result_float[0], '\0', sizeof(float)*test_data.size());
 
-  for (int idx = 0; idx < weak_classifier_.size(); idx++){
+  for (size_t idx = 0; idx < weak_classifier_.size(); idx++){
     std::vector<float> predict_lables = ClassifierFunction(test_data,weak_classifier_[idx]);
-    for (int row_idx = 0; row_idx < test_data.size(); row_idx++)
+    for (size_t row_idx = 0; row_idx < test_data.size(); row_idx++)
       result_float[row_idx] += weak_classifier_[idx].weight * predict_lables[row_idx];
   }
   result.resize(result_float.size());
-  for (int idx = 0; idx < result_float.size(); idx++)
+  for (size_t idx = 0; idx < result_float.size(); idx++)
     result[idx] = Sign(result_float[idx]);
   return true;
 }

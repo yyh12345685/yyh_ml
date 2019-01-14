@@ -38,6 +38,7 @@ namespace id3 {
         data_.push_back(line);
       }
     }
+    read_file.close();
     return true;
   }
   //创建决策树

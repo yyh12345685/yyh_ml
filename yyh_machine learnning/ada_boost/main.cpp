@@ -35,7 +35,7 @@ int main(){
 
   std::vector<int>result;
   ada_boost.Classify(result, test_data);
-  for (int idx = 0; idx < test_data.size();idx++) {
+  for (size_t idx = 0; idx < test_data.size();idx++) {
     std::cout << "test line:";
     for (const auto& it : test_data[idx]){
       std::cout << it << "\t";

@@ -73,6 +73,8 @@ template __declspec(dllexport) void Split(
   std::vector<std::string>& ret, const std::string &str, char delim, bool ignoreEmpty);
 template __declspec(dllexport) void Split(
   std::vector<int>& ret, const std::string &str, char delim, bool ignoreEmpty);
+template __declspec(dllexport) void Split(
+  std::vector<double>& ret, const std::string &str, char delim, bool ignoreEmpty);
 
 template __declspec(dllexport) float GetReservedDecimalNums(float number, int after_point_nums);
 template __declspec(dllexport) double GetReservedDecimalNums(double number, int after_point_nums);
