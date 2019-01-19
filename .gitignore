@@ -37,3 +37,4 @@ yyh_machine learnning/common/Debug/*
 yyh_machine learnning/ada_boost/Debug/*
 yyh_machine learnning/kmeans/Debug/*
 yyh_machine learnning/random_forest/Debug/*
+yyh_machine learnning/knn/Debug/*
