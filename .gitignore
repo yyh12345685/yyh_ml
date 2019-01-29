@@ -39,3 +39,4 @@ yyh_machine learnning/kmeans/Debug/*
 yyh_machine learnning/random_forest/Debug/*
 yyh_machine learnning/knn/Debug/*
 yyh_machine learnning/lr/Debug/*
+yyh_machine learnning/naive_bayes/Debug/*
